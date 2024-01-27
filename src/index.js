@@ -4,13 +4,13 @@ function refreshWeather(response){
     let cityElement=document.querySelector("#city");
 
     cityElement.innerHTML=response.data.city;
-    tempearatureElement.innerHTML=Math.round(temperature)
+    tempearatureElement.innerHTML=Math.round(temperature);
 
 }
 function searchCity(city){
 let apikey = "b2a5adcct04b33178913oc335f405433";
 let apiurl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apikey}`;
-axios.get(apiurl).then(refreshWeather)
+axios.get(apiurl).then(refreshWeather);
 }
 
 
